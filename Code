@@ -1,0 +1,79 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace RandomStuff
+{
+    class Program
+    {
+        
+        static void Main(string[] args)
+        {
+            string y = " ";
+            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~ Welcome to Soul Mate dating app ~~~~~~~~~~~~~~~~~~~~~~~~~ ");
+            Console.WriteLine();
+            Console.WriteLine("Would you like to register yourself as a member?");
+            Console.WriteLine();
+            Console.WriteLine("Yes/No");
+            Console.WriteLine();
+            y = Console.ReadLine().ToLower();
+            Console.WriteLine();
+
+            if (y == "no")
+            {
+                Console.WriteLine("Thank you for using our app. Press enter to continue.");
+                Console.ReadKey();
+
+            }
+
+            else if (y== "yes")
+            {
+                Console.WriteLine("Please write your information:");
+                Members member1 = new Members();
+
+                Console.WriteLine("Name:");
+                member1.Name = Console.ReadLine();
+
+                Console.WriteLine("Age:");
+                member1.Age = Convert.ToInt16(Console.ReadLine());
+
+                Console.WriteLine("Sex:");
+               member1 .Sex = Convert.ToChar(Console.ReadLine());
+
+                ask: Console.WriteLine("What is your relationship status");
+                String status = Console.ReadLine();
+                if (status == "single")
+                {
+                    member1.YourStatus = "single";
+                }
+                else if (status == "divorced")
+                {
+                    member1.YourStatus = "divorced";
+                }
+                else if (status == "widow")
+                {
+                    member1.YourStatus = "widow";
+                }
+                else
+                {
+                    goto ask;
+
+                }
+                
+                    
+            }
+            
+
+            
+
+
+
+
+
+
+        }
+        
+    }
+}
