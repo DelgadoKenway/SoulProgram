@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace RandomStuff
+{
+    class Members
+    {
+        private string name;
+        private int age;
+        private char sex;
+        private string yourStatus;
+       
+
+        public string Name { get => name; set => name = value; }
+        public int Age { get => age; set => age = value; }
+        public char Sex { get => sex; set => sex = value; }
+        public string YourStatus { get => yourStatus; set => yourStatus = value; }
+        
+
+
+
+
+    }
+}
